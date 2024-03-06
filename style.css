@@ -1,0 +1,129 @@
+/* Estilos personalizados */
+
+body {
+  /* Cor de fundo preta com 50% de transparência */
+  background-image: url("pedreira.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  font-weight: 500;
+  color: #ffd000;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ffbf00;
+}
+
+p.info {
+  font-size: 15px;
+}
+
+p.info1 {
+  font-size: 12px;
+}
+
+.top-rectangle {
+  background-color: #000000;
+  padding: 2px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  overflow: hidden;
+  /* Para esconder o texto que ultrapassa os limites do retângulo */
+}
+
+.top-rectangle p {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 1px;
+  color: #ffd000;
+}
+
+.top-rectangle p {
+  white-space: nowrap;
+  /* Para que o texto não quebre a linha */
+  animation: slide-text 10s linear infinite;
+  /* Definindo a animação com duração de 10 segundos e repetição infinita */
+}
+
+@keyframes slide-text {
+  from {
+    transform: translateX(100%);
+    /* Começa fora da tela à direita */
+  }
+
+  to {
+    transform: translateX(-100%);
+    /* Termina fora da tela à esquerda */
+  }
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+
+.footer p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  background-color: #ff0000;
+  font-weight: 700;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2px;
+  width: 100%;
+}
+
+.footer img {
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  filter: invert(1);
+  /* Inverta a cor do ícone para branco */
+}
+
+#resultado {
+  margin-top: 20px;
+  color: #ffffff;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  height: 24px;
+  padding: 6px;
+  border: solid 1px #ffd900;
+  box-shadow: inset 0 -3;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+label {
+  display: auto;
+  width: 150px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+}
