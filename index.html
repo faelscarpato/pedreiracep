@@ -1,60 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-    content="site para consulta de novos Ceps da cidade de pedreira-SP, site criado por Rafael Scarpato">
+    content="site para consulta de novos Ceps da cidade de pedreira-SP, site criado por Rafael Scarpato" />
   <title>CONSULTA CEP | PEDREIRA-SP</title>
   <!-- Bootstrap 5 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
   <link rel="shortcut icon" href="logoconsulta.png" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGBF11KF15"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
+    gtag("config", "G-JGBF11KF15");
+  </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGBF11KF15"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JGBF11KF15');
-</script>
 <body>
   <div class="top-rectangle">
     <p>CONSULTE O NOVO CEP DA SUA RUA AQUI!</p>
   </div>
-  <div class="container-fluid p-0">
-    <div class="row g-0">
-      
-      <div class="col-12">
-        <div class="card mt-4">
-          <div class="card-header">
-            <h1 class="text-center">CONSULTA CEP - PEDREIRA-SP</h1>
-          </div>
-            <div id="voltarTopo">
-	<a href="#" id="subir"><img src="Topo.png" alt="topo.png"></a>
+  <header class="navbar-brand">
+    <div class="container-center-horizontal">
+      <div class="iphone-14-pro-max-1 screen" data-id="87f0d418-fe9d-42b1-8baf-4ba7a0c5aa67">
+        <div class="grupo-1-BDCMQH" data-id="715cd6cf-3067-402f-ad41-10df45ae63b8">
+          <div class="retngulo-1-8weMWt" data-id="9387ffbc-1784-4631-895f-12f24f3da807"></div>
+          <i><a href="#"><img class="casa-8weMWt" data-id="afdfc044-aa77-43b6-8e2a-f46208c536c0" src="casa@1x.png"
+                alt="casa" /></a></i>
+          <i><a href="https://faelscarpato.github.io/rafael"><img class="github-8weMWt"
+                data-id="ef800bde-9357-47c3-9673-4adf03ee0b80" src="github@1x.png" alt="github" /></a></i>
+          <i><a href="https://instagram.com/rafaelscarpato"><img class="instagram-8weMWt"
+                data-id="ff155b1b-166d-467e-8fd3-674e644554c8" src="instagram@1x.png" alt="instagram" /></a></i>
+          <i><a href="https://wa.me/5519995466902"><img class="whatsapp-8weMWt"
+                data-id="f6ecd4a3-fe0d-4c75-8bc3-250cddd4d911" src="whatsapp@1x.png" alt="whatsapp" /></a></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <div class="card mt-4">
+            <div class="card-header">
+              <h1 class="text-center">CONSULTA CEP - PEDREIRA-SP</h1>
             </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-                <p class="info text-center">ESTE SITE FOI CRIADO PARA SER SIMPLES, FÁCIL E RÁPIDO.</p>
-                <h2 class="text-center">DIGITE O NOME DA SUA RUA</h2>                
-                <input type="text" id="busca" oninput="buscarCEP()" placeholder="Rua ou CEP (não esquecer dos acentos)" class="form-control mb-3">
-                <div id="resultado"></div>
+            <div id="voltarTopo">
+              <a href="#" id="subir"><img src="Topo.png" alt="topo.png" /></a>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <p class="info text-center">
+                    CLIQUE NO BOTÃO ABAIXO PARA BUSCAR O NOVO CEP
+                  </p>
+                  <button type="button" class="btn btn-primary btn-block btn-style" onclick="abrirPopup()">
+                    BUSCAR CEP
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="popupBusca" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="buscaCepLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="buscaCepLabel">DIGITE O NOME DA RUA</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="buscarCEP()">Buscar</button>
+                    <button type="button" class="btn btn-danger" onclick="limparBusca()">Limpar</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="text" id="buscaRua" class="form-control mb-3"
+                      placeholder="Rua ou CEP (não esquecer dos acentos)">
+                    <div id="resultadoBusca"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="buscarCEP()">Buscar</button>
+                    <button type="button" class="btn btn-danger" onclick="limparBusca()">Limpar</button>
+                  </div>
+                  <div id="voltarTopo">
+                    <a href="#buscaCepLabel" id="subir"><img src="Topo.png" alt="topo.png" /></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer">
-        <p>GOSTOU? SÓ CHAMAR NO WHATSAPP<a href="https://wa.me/5519995466902"><img src="whatsapp.svg" alt="WhatsApp" class="svg"></a></p>
+    </div>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <div class="card mt-4">
+            <div class="card-header">
+              <h1 class="text-center">CLIMA - PEDREIRA, SP</h1>
+            </div>
+
+            <div class="card-body">
+              <iframe width="100%" height="187"
+                src="https://embed.windy.com/embed.html?type=forecast&location=coordinates&detail=true&detailLat=-22.740844586494532&detailLon=-46.894950726709794&metricTemp=°C&metricRain=mm&metricWind=km/h"
+                frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <div class="card mt-4">
+            <div class="card-header">
+              <h1 class="text-center">BUSCAR TELEFONE COMÉRCIO</h1>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <h1 class="info text-center">
+                    EM BREVE
+                  </H1>
+                  <!-- <button type="button" class="btn btn-primary btn-block btn-style" onclick="abrirPopup()">
+                        BUSCAR CEP
+                      </button>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="footer">
+    <p>
+      GOSTOU? SÓ CHAMAR NO WHATSAPP<a href="https://wa.me/5519995466902"><img src="whatsapp.svg" alt="WhatsApp"
+          class="svg" /></a>
+    </p>
+  </div>
+  </div>
+  </div>
   <!-- Fim do rodapé -->
   <script src="script.js"></script>
+  <script src="clima.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
