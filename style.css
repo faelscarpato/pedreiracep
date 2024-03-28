@@ -2,11 +2,10 @@
 
 body {
   /* Cor de fundo preta com 50% de transparência */
-  background-image: url("pedreira.jpg");
+  background-color: #00000034;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  padding: 5px;
 }
 
 h1 {
@@ -17,9 +16,9 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h2  { 
+h2 {
   margin: 10px 0;
-  font-size: 16px ;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -28,11 +27,11 @@ p {
   text-align: center;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #ff0000;
+  color: #000000;
 }
 
 p.info {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 p.info1 {
@@ -56,7 +55,7 @@ p.info1 {
   font-weight: 600;
   font-size: 14px;
   padding: 1px;
-  color: #ffd000;
+  color: #ffffff;
 }
 
 .top-rectangle p {
@@ -93,7 +92,7 @@ p.info1 {
   text-align: center;
   color: #ffffff;
   font-size: 14px;
-  background-color: #ff0000;
+  background-color: #000000;
   font-weight: 700;
   position: fixed;
   margin-bottom: 0;
@@ -104,7 +103,6 @@ p.info1 {
   height: auto;
   padding: 3px;
   z-index: 999;
-
 }
 
 .footer img {
@@ -120,17 +118,16 @@ p.info1 {
   color: #000000;
   margin-left: 10px;
   font-weight: 600;
-    margin-bottom: 40px;
-
+  margin-bottom: 40px;
 }
 
 input {
   width: 100%;
-  height: 24px;
-  padding: 6px;
-  border: solid 1px #ffd900;
+  height: 30px;
+  padding: 3px;
+  border: solid 3px #ffd900;
   box-shadow: inset 0 -3;
-  margin: auto;
+  margin: 2px;
   border-radius: 5px;
 }
 
@@ -141,34 +138,183 @@ label {
   margin-bottom: 15px;
 }
 
-.card-header{
-  background-color: rgb(0, 153, 255);
+.card-header {
+  background-color: rgba(31, 31, 31, 0.541);
   text-align: center;
   font-size: large;
   font-family: "Arial", sans-serif;
-  width: auto;
+  width: 100%;
   height: 35px;
+  border-radius: 7%;
+  position: relative;
+  align-items: auto;
+}
+
+#subir {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 9999;
+  background-color: #00000000;
+  border-color: solid 2px #000000;
+  margin-bottom: 35px;
+  margin-left: 20px;
+  margin-right: 10px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+#subir img {
+  width: 50px;
+  height: 50px;
+}
+
+.iphone-14-pro-max-1 .grupo-1-BDCMQH {
+  background-color: transparent;
+  height: 50px;
+  position: relative;
+  top: 25px;
+  width: 100%;
+  left: 4px;
+  display: auto;
+}
+
+.iphone-14-pro-max-1 {
+  /* Assuming this is the parent container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Set a height for the parent if needed */
+}
+
+.grupo-1-BDCMQH {
+  /* Remove unnecessary properties */
+  background-color: transparent;
+  height: 50px;
+  width: 100%;
+}
+
+.iphone-14-pro-max-1 .retngulo-1-8weMWt {
+  background-color: #ffffff;
   border-radius: 10px;
+  box-shadow: inset 5px 5px 12px #00000073;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
 }
 
-#subir{
-	position:fixed;
-	bottom:0px;
-	right:0px;
-	z-index: 9999;
-	background-color: #00000000;
-	border-color: solid 2px #000000;
-	margin-bottom: 35px ;
-	margin-left: 20px ;
-	margin-right: 10px ;
-	border-radius: 50px;
-	width: 50px;
-	height: 50px ;
+.iphone-14-pro-max-1 .casa-8weMWt {
+  background-color: transparent;
+  height: 30px;
+  left: 27px;
+  top: 10px;
+  filter: invert(0);
+  position: absolute;
+  width: 30px;
 }
 
+.iphone-14-pro-max-1 .github-8weMWt {
+  background-color: transparent;
+  height: 30px;
+  left: calc(35.48% - 19px);
+  filter: invert(0);
+  position: absolute;
+  top: 10px;
+  width: 30px;
+}
 
+.iphone-14-pro-max-1 .instagram-8weMWt {
+  background-color: transparent;
+  bottom: 10px;
+  height: 30px;
+  filter: invert(0);
+  position: absolute;
+  right: calc(36.24% - 1px);
+  width: 30px;
+}
 
-#subir img{
- width: 50px;
- height: 50px;
+.iphone-14-pro-max-1 .whatsapp-8weMWt {
+  background-color: transparent;
+  height: 30px;
+  filter: invert(0);
+  position: absolute;
+  right: 31px;
+  top: 11px;
+  width: 30px;
+}
+
+/* Estilo geral da pop-up */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.541);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #ffffffd3;
+  margin: 10% auto;
+  padding: 2px;
+  border: 5px solid #00000028;
+  width: 400px; /* Ajuste a largura conforme necessário */
+}
+
+/* Fechar pop-up */
+.close {
+  color: #ff0000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-style {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px #00000073;
+  color: #000000;
+  font-weight: 600;
+}
+
+.card-body {
+  background-color: #ffffff67;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.card-body h1 {
+  color: #ff0000;
+  font-weight: 900;
+}
+
+.row {
+  margin-bottom: 0px;
+}
+
+.form-control {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  padding: 2px;
+  margin: auto;
+  box-shadow: inset 3px 3px 9px #00000073;
 }
